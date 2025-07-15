@@ -57,22 +57,27 @@ def save_to_markdown(input_path, output_path):
             content = data.get('content', '')
             url = data.get('url', '')
 
-            markdown_content = f"# {topic}\n\n{content}\n\n[Read more]({url})\n"
+            markdown_content = f"{content}\n\n[Read more]({url})\n"
             output_file = os.path.join(output_path, f"{topic}.md")
             with open(output_file, 'w', encoding='utf-8') as out_f:
                 out_f.write(markdown_content)
 
+def get_title(content):
+    return content.strip().split('\n')[0].strip()
+
 def save_to_json(data):
     for topic, article in zip(data['topics'], data['articles']):
+        title = get_title(article)
         item = {
             "topic": topic,
             "content": article,
             "url": data['url'],
+            "title": title
         }
 
         json.dump(
             item,
-            open(f"articles/{topic}.json", "w", encoding="utf-8"),
+            open(f"articles/{title}.json", "w", encoding="utf-8"),
             ensure_ascii=False,
             indent=2
         )
