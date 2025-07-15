@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"我儿子必须考第一！" 毁掉3代人的教育毒药</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8f3ed;
+            color: #333;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(31, 38, 135, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #8e44ad;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(142, 68, 173, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #16a085;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(22, 160, 133, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .active-line {
+            margin: 1rem -2rem;
+            padding: 1.2rem 2rem;
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+        .quote-box {
+            border-left: 4px solid #8e44ad;
+            background-color: rgba(142, 68, 173, 0.05);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">"我儿子必须考第一！" 毁掉3代人的教育毒药</h1>
+            <p class="text-gray-600">阿德勒心理学视角下的教育反思</p>
+        </div>
+
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/L-srFAC6toU/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/8f491f43bdd14b858c77ba8d8c5e4e39.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-purple-500"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哈喽大家好欢迎来到，我们的播客。嗯啊今天咱们来聊一个这个很多家庭都会面临的一个问题啊，就是关于孩子的教育。嗯啊，特别是这个父母对于孩子一定要考第一的这种期待。嗯啊会带来什么样的影响？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 听起来就很有压力啊，对，那我们赶紧来看看背后到底有什么可以值得我们去深思的吧。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 就是说，呃，你觉得父母如果是拼命的把孩子往第一名去逼，嗯会带来什么样的结果？</p>
+                
+                <div class="quote-box">
+                    <p class="mb-3"><span class="speaker-b">男生:</span> 就是我有一个朋友嗯她就是因为她的儿子，十岁的儿子。数学考了九十八分嗯全班第二嗯。然后她就非常非常生气，嗯就开始吼他，嗯那个孩子就哭着说我已经很努力了嗯他还要把他推开。嗯，就不让他靠近。其实，呃阿德勒他在那个儿童教育心理学里面就有讲过这种，教育方式是非常不可取的嗯。他会给孩子带来一种非常大的心理负担，嗯甚至会制造出很多悲剧。</p>
+                </div>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 对就是说，你觉得这种对于成功，或者说对于赢的这种执念，嗯会对孩子的成长。或者说他之后的人生产生什么样的影响？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实啊就是。呃阿德勒也有讲过就是追求优越嗯是人的一种本能嗯。但是呢如果说你把争第一当成了唯一的目标嗯那这个野心就会变成一把双刃剑。OK，你比如说有孩子考了九十九分嗯就崩溃到窒息嗯。因为他觉得我失去了那一分就是失败， 或者说有孩子会去。偷偷的撕毁，竞争对手的作业。甚至还有更极端的比如说有十四岁的少年因为自己没有办法吹口哨嗯而非常的自卑然后最后导致精神分裂。就是，这些都是非常，触目惊心的一些例子。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 听着确实让人觉得挺沉重的，那这些影响会延续到他们成年之后吗？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 是会的呀，就比如说他，成年之后。在工作当中他就没有办法去面对挑战。嗯，或者说他在婚姻关系当中他也要去掌控。嗯，甚至他会把他父母，曾经加诸在他身上的一些暴力。再传递到，自己的孩子身上。哦对，就是这种影响其实是非常深远的，嗯哼，所以我们才要非常的警惕啊这种教育的方式。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 对那你觉得就是说，在孩子的成长过程当中，有哪些能力是比考第一还要重要的，值得我们去关注的。</p>
+                
+                <div class="quote-box">
+                    <p class="mb-3"><span class="speaker-b">男生:</span> 嗯，其实。呃阿德勒他有讲过就是教育的目的，是要培养一个完整的人。哦，而不是一个考试机器。OK，所以比如说，有一个男孩他是一个左撇子嗯他因为写字很丑嗯。被老师批评，嗯然后他的父母就跟他说你这个左手是一只特别的画笔。嗯，他后来就成为了一个非常著名的画家。就是其实，你去接纳孩子的不完美。嗯，鼓励他去用自己的优势。去，化解自己的自卑。嗯，这个其实是比你去要求他完美要重要的多。</p>
+                </div>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 听起来这些能力确实会对他的人生产生更积极的影响。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对是的，那你比如说像这种考试失利了。我们去引导他去从错题当中去学习新的东西。嗯，那他就能够把这个挫折转化为自己成长的机会。OK，而不是说你去责骂他。那还有一些孩子比如说他会为了。获得表扬，而假装自己身体不舒服，嗯就是他很怕不被喜欢。那其实这个时候我们就要去引导他。让他知道就是，我不需要被所有人认可。我依然是值得被爱的， 那这个才是真正的自信。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 那所以就是说教育者应该怎么样去帮助孩子去找到属于他自己的赛道呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实每个孩子他都是不一样的嗯就像阿德勒说的就是。不要用别人家的孩子来作为你的标杆。嗯，那如果说这个孩子他是一个竞争型的孩子。那你可以去引导他一些，胜不骄败不馁的一些态度。OK 那如果说这个孩子他是一个比较容易退缩的孩子。那你可以先让他去做一些他擅长的事情，嗯让他能够在这个当中获得自信。 那他才能够去，面对一些他，之前害怕的事情。那还有一些孩子比如说他是那种嫉妒心比较强的孩子。那你可以引导他去发现别人身上的优点。并且能够去学习， 那这样的话他才能够在自己的这个节奏上面去成长。而不是说你去，强迫他。就像你不能强迫一朵迎春花，在冬天的时候开放。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 那所以就是说父母在教育孩子的过程当中，应该怎么样去调整自己的期待？才能够更好的去引导孩子成长呢？</p>
+                
+                <div class="quote-box">
+                    <p class="mb-3"><span class="speaker-b">男生:</span> 其实我觉得就是父母可以经常去想一想就是。三十年之后你希望你的孩子成为一个什么样的人？是一个，只会炫耀自己曾经考了多少个第一的人。还是一个，能够，眼里有光。能够去，勇敢的去爱。也能够去接受失败的人，OK 其实。呃阿德勒在很多年前就已经告诉过我们了。他说真正的优越，是在于超越昨天的自己。而不是去超越别人。</p>
+                </div>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 对今天我们聊了很多关于这种。追求第一的这种教育方式可能会带来的一些隐患。以及我们怎么样去帮助孩子去发展一些，更重要的能力。比如说面对失败的勇气，比如说解决问题的能力，比如说。找到自己的方向的这种能力。对希望对大家有帮助。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 以上就是这期播客的全部内容啦，然后咱们下期再见拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-purple-500 hover:underline">coze space</a></p>
+        </div>
+    </div>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孩子总喊"我要赢"，是上进心还是灾难？</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #fef6e4;
+            color: #172c66;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(23, 44, 102, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(23, 44, 102, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #f582ae;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(245, 130, 174, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #8bd3dd;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(139, 211, 221, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .active-line {
+            margin: 1rem -2rem;
+            padding: 1.2rem 2rem;
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+        .header-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">孩子总喊"我要赢"，是上进心还是灾难？</h1>
+            <p class="text-gray-600">阿德勒戳破儿童心理的隐秘陷阱</p>
+        </div>
+
+        <img src="https://s.coze.cn/image/HpRUZrbDX5w/" alt="播客封面" class="header-image">
+
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/HpRUZrbDX5w/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/1cd73518f678419eb7aaf20a8cec9f18.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-pink-500"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哈喽大家好欢迎收听，我们的播客。呃今天想聊一聊，孩子老想赢这件事情背后可能的原因。以及，我们可以做些什么来引导。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 嗯，这个话题挺有意思的那我们就直接开始吧！</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 就是孩子老想赢这个事情，我们到底应该怎么看？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 就是阿德勒他在那个儿童教育心理学里面提过就是。孩子追求优越感，这个事情是。嗯，可能会成为他的一种提升自己的动力。但也有可能会把他引向一个，自满甚至是。迷失的一个，危险的境地。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 孩子为什么老想赢？他这个背后到底是什么原因？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实阿德勒他是觉得，追求优越，嗯，和自卑感是同一枚硬币的两面。哦，就是你，比如说有一个六岁的小男孩。他因为没有办法吹口哨他就非常的痛苦觉得自己很自卑。但是后来他有一天学会了他就觉得是上天在帮他。哦，就他会有这种，或者说有一些孩子他是左撇子。然后他会因为经常被骂很笨拙。他就会，反而自己偷偷的练，用右手。变得比很多人都灵活，就是其实他背后都是他们在跟这种弱小感。在做斗争。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 那你说孩子如果说这个优越感，追求优越感如果走偏了会有哪些具体的表现呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 就有些孩子他会比如说考试如果没有拿第一他就会发脾气。嗯，或者是说他会偷偷的去把别人的试卷撕掉。哦，然后或者是说他在玩游戏的时候他一定要当老大。嗯哼，如果他当不了老大他就会捣乱，甚至有一些孩子他会为了证明自己。他会，选择比如说逃学或者是说去混社会，因为他觉得。这样可以让他获得一种掌控感。哦，对，就他会有这种，病态的野心。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 那我们怎么才能够帮孩子去把这个想赢的这种冲劲，转化成他真正成长的动力呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实，我觉得，嗯。还是要，让孩子去明白，就是真正的优越，是在于，你超越了从前的自己。哦，那这个其实就是要我们做父母的。在日常生活当中去关注到他的一些点滴的进步。比如说他今天比昨天多背了两个单词。那你可以去，肯定他的这个努力。而不是说你总是拿他跟别的孩子去比。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 这确实是个很智慧的做法哎对！</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 然后还有一个就是很重要的就是要教孩子怎么去面对失败。就是当他遇到挫折的时候你不要急着去安慰他。而是你可以跟他一起去分析说这个问题出在哪里我们可以怎么去解决。嗯，包括你要去发现他的优点。比如说他可能数学不好但是他跑步很快。那你就可以夸他的跑步，那他在跑步上面获得了成就感之后他也会有更多的勇气去面对。其他的挑战。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 我们在面对孩子就是说我要赢这种心态的时候我们到底要怎么回应才是真正的在支持他呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实孩子他想要赢背后的，核心的需求是他希望他的努力被看到。而不是说他要那个第一名的标签。所以我们其实要做的是去肯定他努力的过程。比如说你可以告诉他你不需要去赢过所有人。你只需要，今天比昨天更勇敢一点就够了。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 对今天我们聊了孩子为什么老想赢，然后也聊了这个事情背后的，复杂的心理因素。也聊了我们可以怎么去引导他们，把这种求胜欲转化成自己成长的动力。对希望对大家有帮助！</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 以上就是这期播客的全部内容啦，感谢大家的收听，咱们下期再见拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-pink-500 hover:underline">coze space</a></p>
+        </div>
+    </div>

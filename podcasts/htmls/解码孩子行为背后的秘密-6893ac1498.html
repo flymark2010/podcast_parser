@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孩子屡教不改是本性坏？揭开儿童行为背后的人格密码</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #fef6e4;
+            color: #172c66;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(31, 38, 135, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #8bd3dd;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(139, 211, 221, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #f582ae;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(245, 130, 174, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+        .header-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">孩子屡教不改是本性坏？</h1>
+            <h2 class="text-2xl text-gray-600">揭开儿童行为背后的人格密码</h2>
+        </div>
+
+        <img src="https://s.coze.cn/image/HXRe1P6bikE/" alt="播客封面" class="header-image">
+
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/HXRe1P6bikE/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/93abb579e48046378215b2abe3e7f7d8.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-pink-500"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哈喽大家好欢迎来到今天的播客，嗯今天我们要聊的呢是孩子为什么总是。犯同样的错误，嗯哼背后的原因是什么，以及家长可以做些什么。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 嗯，这个真的是很多家长的痛，对，那我们就直接开始说吧就孩子这些行为到底在传递什么。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 就是孩子老犯一些你说他他也不听，你打他他也不听，嗯你骂他他也不听。嗯，到底是为什么？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实大部分都不是因为孩子，他本质是坏的是因为家长没有理解到他这个行为背后真正的驱动是什么，对。就是他的这个人格密码你没有解读对，所以你用的方法都是不对的。所以他就会一直这样。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 那有些孩子为什么会看起来就是，特别喜欢搞破坏，嗯哼，甚至有些孩子会被贴上坏孩子的标签。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实这个是阿德勒他有在他的儿童教育心理学里面有讲过，他说就是。孩子的每个行为其实都是他整体人格的一个表达。哦，他举了一个例子就有一个十三岁的男孩。他在妹妹出生之前，是一个非常被宠爱的孩子嗯哼然后在妹妹出生之后他就开始。出现一些比如说扯妈妈的头发呀。呃，拧妈妈的胳膊呀包括在学校里面不写作业呀，就是，其实他这些行为的目的就是为了要赢回父母的注意。哦，那他这个时候他的这个整体人格就是在。表达他的这个需求，哦对。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 为什么有些孩子就会看起来像是那种，油盐不进，屡教不改。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 就是因为，很多家长他会想要用惩罚去。让孩子停止他的这个行为，但是其实惩罚只是让他暂时的压抑了这个行为。但是他背后的那个错误的目标其实还在。就比如说那个孩子他就是为了要赢回父母的关注那你越惩罚他他越觉得。哎我这个方法是有效的我继续用，甚至我要升级我的这个方法。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 有没有什么比惩罚更有效的方法能够真正的去纠正孩子的这些不好的行为呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 当然有啦就是。关键是你要去解码他这个行为背后的真正的需求是什么，嗯哼。就比如说孩子他抢玩具。或者说孩子他不写作业或者说孩子他故意惹你生气嗯其实他背后都是有一个，没有被满足的需求在的。你要把这个需求找出来。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 听起来好像是要，先理解孩子到底在想什么。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对没错没错没错！然后第二步就是你要去。找到他的这个行为的转折点是发生了什么事情让他有这样的行为。比如说，家里有新的成员加入了或者说，环境有改变了。你去帮他修正他的这个错误的认知，第三步才是。你要用正向的反馈去帮他建立一个正确的目标。就比如说你可以夸他，你可以陪他玩，就把他的这个行为。往正确的方向去引导。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 有些孩子为什么就会看起来像是那种，我就是要跟你对着干，我就是要。搞破坏，我就是要，屡教不改。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实这些孩子他背后的，内心的语言是我想要被关注我想要安全感。对，就是他的这个世界其实很小的。他就是希望能够通过，妈妈的一个拥抱或者说爸爸的一个夸奖来确认自己是被爱的。但是当他的这个安全感的来源被打破了之后。他就只能用他自己的方式，笨拙的方式来。测试我到底还重不重要。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 所以其实孩子那些看起来让人头疼的行为。其实背后都是有他的原因的，对关键是我们要去理解他的这个原因然后用。爱和耐心去帮他找到正确的方向。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 以上就是这期播客的全部内容啦，然后感谢大家的收听咱们下期再见拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-pink-500 hover:underline">coze space</a></p>
+        </div>
+    </div>
+</body>
+</html>

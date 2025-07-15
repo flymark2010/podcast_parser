@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
-import json
+import json, glob, os
 from modelscope.pipelines import pipeline
 import numpy as np
 
-def parse_html(html_path, output_path):
+def parse_html(html_path):
     with open(html_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
 
@@ -38,10 +38,6 @@ def parse_html(html_path, output_path):
         "conversation": conversation,
     }
 
-    # save to output json file
-    with open(output_path, "w", encoding="utf-8") as out_file:
-        json.dump(data, out_file, ensure_ascii=False, indent=2)
-
     return data
 
 class CAMPlusPlus:
@@ -69,9 +65,26 @@ def to_json(obj):
     else:
         return obj
 
+def batch_process_timeline(path):
+    model = CAMPlusPlus()
 
-def main():
-    print("Hello from podcast-parser!")
+    files = glob.glob(os.path.join(path, "htmls", "*.html"))
+    
+    for file in files:
+        print(f"Processing {file}...")
+        filename = os.path.basename(file).replace(".html", "")
+        output_file = os.path.join(path, "jsons", f"{filename}.json")
+        if os.path.exists(output_file):
+            print(f"Skipping {output_file}, already exists.")
+            continue
+        data = parse_html(file)
+        data['timeline'] = model(data["audio"], oracle_num=2)
+
+        with open(output_file, "w", encoding="utf-8") as out_file:
+            json.dump(data, out_file, ensure_ascii=False, indent=2)
+
+
+def single_process_timeline():
     filename = "解码孩子行为背后的心理密码-2ff904688b"
     html_file = f"htmls/{filename}.html"
     output_file = f"jsons/{filename}.json"
@@ -86,4 +99,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    batch_process_timeline('./podcasts')
