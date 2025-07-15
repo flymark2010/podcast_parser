@@ -10,11 +10,12 @@
 1. 更新环境
 
 ```bash
+pip install uv
 uv sync
 ```
 
-2. 运行
+2. 生成文章
 
 ```bash
-uv run main.py
+uv run article.py
 ```

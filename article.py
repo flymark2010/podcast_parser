@@ -2,7 +2,7 @@
 This example describes how to use the workflow interface to chat.
 """
 
-import os, json
+import os, json, glob
 from dotenv import load_dotenv  # 新增
 from cozepy import COZE_CN_BASE_URL
 from cozepy import Coze, TokenAuth, Message, ChatStatus, MessageContentType  # noqa
@@ -46,13 +46,23 @@ def create_articles(page_url: str):
         }
     return data
 
-if __name__ == "__main__":
-    # Example usage
-    page_url = "https://www.diancang.xyz/waiguomingzhu/17921/335654.html"
-    # data = create_articles(page_url)
-    data = json.load(open('data.json', 'r', encoding='utf-8'))
-    # print(data)
-    
+def save_to_markdown(input_path, output_path):
+    files = glob.glob(os.path.join(input_path, "*.json"))
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    for file in files:
+        with open(file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            topic = data.get('topic', 'unknown_topic')
+            content = data.get('content', '')
+            url = data.get('url', '')
+
+            markdown_content = f"# {topic}\n\n{content}\n\n[Read more]({url})\n"
+            output_file = os.path.join(output_path, f"{topic}.md")
+            with open(output_file, 'w', encoding='utf-8') as out_f:
+                out_f.write(markdown_content)
+
+def save_to_json(data):
     for topic, article in zip(data['topics'], data['articles']):
         item = {
             "topic": topic,
@@ -66,3 +76,11 @@ if __name__ == "__main__":
             ensure_ascii=False,
             indent=2
         )
+
+if __name__ == "__main__":
+    # Example usage
+    page_url = "https://www.diancang.xyz/waiguomingzhu/17921/335654.html"
+    # data = create_articles(page_url)
+    # print(data)
+
+    save_to_markdown("articles", "docs/markdown")
