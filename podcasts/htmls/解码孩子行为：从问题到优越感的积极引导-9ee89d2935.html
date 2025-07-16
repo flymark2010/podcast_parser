@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>警惕！孩子总尿床、装病？别骂，这可能是他在"争宠"</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8f4f0;
+            color: #333;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(31, 38, 135, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #8e44ad;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(142, 68, 173, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #16a085;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(22, 160, 133, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .active-line {
+            background-color: rgba(142, 68, 173, 0.08);
+            border-left: 5px solid #8e44ad;
+            margin: 1rem -2rem;
+            padding: 1.2rem 2rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+        .header-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">警惕！孩子总尿床、装病？别骂，这可能是他在"争宠"</h1>
+            <p class="text-gray-600">小心孩子掉入"优越感陷阱" - 儿童心理学专题</p>
+        </div>
+
+        <img src="https://s.coze.cn/image/tYTQ-XT0hxI/" alt="播客封面" class="header-image">
+
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/tYTQ-XT0hxI/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/d7c63156bf8c45b59bb77e0d2975f3d6.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-purple-500"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哈喽大家好欢迎来到今天的播客，呃今天我们要聊一个。很多家长都会遇到的一个问题啊就是孩子，通过一些问题行为来吸引你的注意。或者说孩子在追求优越感的过程当中啊，走进了一些误区。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 嗯，是个很有意思的话题那我们就来聊一聊怎么帮孩子用更积极的方式去追求优越感吧！</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 对那我们就先从，孩子为什么会出现这些问题行为，他们的背后到底藏着什么样的心理？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 比如说有一个四四岁的小朋友，嗯他最近突然开始尿床。然后说自己肚子疼，嗯去医院又检查不出任何的问题。他妈妈就是训了他一顿之后反而更严重了，其实这些都是孩子的问题行为。那还有一些比如说孩子考试的时候特别紧张。或者说，呃哭哭啼啼的要要抱抱要关注，其实这些行为背后。都是他们在争夺父母的关注，嗯哼，甚至会让他们陷入一种。优越感的陷阱，就是我通过这种方式可以获得特别的对待。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎那你说，孩子这些，看似匪夷所思的行为，比如说尿床，比如说装病。背后真的是有这样的心理动机吗？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 是呀就像阿德勒他在那个儿童教育心理学里面就讲了一个十三岁的男孩。他从八岁开始就一直尿床嗯。然后他的弟弟出生之后他的父母就把注意力都转移到了弟弟身上嗯。他发现就是他尿床之后他的妈妈就会，很关注他。所以他的这个尿床其实是他对于被忽视的一种抗议，哦哼。那其实还有一些比如说孩子会装病。或者说孩子在考试的时候会很紧张，或者说孩子会哭哭啼啼，其实都是他们的一种求关注的信号。就是我只有通过这样的方式。才能让大人来关心我，或者说才能让大人来，满足我的需求。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 为什么有些孩子会，陷在这个，所谓的优越感陷阱里面呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 就是其实每个孩子他都是有追求优越感的这个天性的嗯哼比如说他想要通过考一百分。来获得父母的认可或者说他想要通过。帮妈妈做家务来获得妈妈的表扬，那这种其实是一种良性的优越感的追求。他会让孩子变得更自信然后更努力。但是当他发现他没有办法通过这些正向的行为来获得关注的时候。他就会开始尝试一些问题行为。比如说他发现他只要尿床。或者说他只要装病，嗯就可以立刻获得。父母的紧张和照顾，那他就会选择去走这样的一个捷径。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哦原来是这样，对，那这种捷径会有什么长久的影响吗？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 肯定有呀就是孩子他会慢慢的习惯用问题行为来吸引别人的注意嗯哼那他就会越来越依赖这种方式。然后他也会被贴上一些标签比如说你是一个调皮的孩子或者说你是一个麻烦的孩子。那他慢慢的也会认为自己就是这样的一个人。甚至这种模式会一直延续到他成年之后，比如说他会用一些比较极端的方式。来获得别人的关注比如说他会。叛逆或者说他会自暴自弃。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 如果说我们发现孩子，正在用这种问题行为来，争夺关注的话。我们怎么能够去帮助他，走出来，并且引导他用更积极的方式去追求优越感呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 就是当我们发现孩子有这样的行为的时候千万不要去批评他说你不要这样或者说你怎么这么不懂事。嗯哼，因为你批评他其实是在给他更多的关注那他可能会更强化这样的行为。我们要做的是去破译他行为背后的密码。比如说他为什么会频繁的尿床或者说他为什么会在考试的时候很紧张。去找到他的真正的需求。然后去满足他的这个需求。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 具体要怎么做呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 比如说孩子如果是因为有了二胎之后他觉得被冷落了然后他开始有一些问题行为嗯那我们就可以。多给他一些单独的陪伴的时间。嗯哼，如果说孩子是因为你经常拿他和别的孩子比较他害怕失败。那我们就可以改变我们的沟通方式。对同时呢我们要对于他的积极行为。进行强化，比如说他主动的收拾了玩具。我们要及时的表扬他。对对于他的一些问题行为我们要冷淡处理。就是让他发现他只有通过正向的行为才能获得关注。那他就会慢慢的调整自己的行为模式。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 对，行吧我觉得今天咱们聊的还挺透的哈从孩子为什么会用问题行为来吸引关注。到我们怎么去帮助他走出来其实核心的，关键还是在于。我们要理解孩子行为背后的需求。然后我们要引导他用更积极的方式去追求优越感。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 嗯，OK 了以上就是这期播客的全部内容啦感谢大家的收听咱们下期再见拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-purple-500 hover:underline">coze space</a></p>
+        </div>
+    </div>
+</body>
+</html>

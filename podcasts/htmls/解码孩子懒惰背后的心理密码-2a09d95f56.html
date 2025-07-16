@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你骂孩子"懒"时，他其实在偷偷松口气</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f9f5f0;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(31, 38, 135, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #8b5cf6;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #10b981;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(16, 185, 129, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .active-line {
+            background-color: rgba(139, 92, 246, 0.08);
+            border-left: 5px solid #8b5cf6;
+            margin: 1rem -2rem;
+            padding: 1.2rem 2rem;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">你骂孩子"懒"时，他其实在偷偷松口气</h1>
+            <p class="text-gray-600">别让你的焦虑，成了他的"保护伞"</p>
+        </div>
+
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/eWsZ_49BjkY/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/75ae9d3a941043e1bb7eca0a0d251a6e.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-purple-500"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哈喽大家好欢迎收听，我们的播客。呃今天我们想聊一个，在家庭教育当中非常常见的一个问题啊就是孩子懒。啊，孩子懒这个事情背后到底有什么样的心理动因？然后家长应该怎么去应对？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 嗯，对这个真的是很头疼的一件事情那我们就一起来看一看这个现象背后到底隐藏着什么吧。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 第一个问题就来了啊孩子为什么会懒？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实啊，就是阿德勒他在那个儿童教育心理学里面他有提到就是孩子的懒。有的时候是一种自我保护。就是他可能害怕失败，然后他就通过这种不作为。来，避免，你去，批评他失败。就有一些家长不是经常会说吗就是你这孩子其实挺聪明的就是懒。你要是不懒的话你什么都能干成。其实他们可能没有想到就是这个懒，有可能是孩子自己设计的一个保护壳。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 就为什么有些孩子他就宁愿被你说懒他都不愿意去努力呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 这个其实背后还是他的这个自信的问题。因为很多孩子他会觉得我懒。是一个比较，怎么说吧好听一点的一个标签。就是他比你说他笨要好听一点。对，对吧他懒他觉得好像我只是没有尽力。我还有我本可以的这样的一个幻想。但如果我努力了还是失败了那我就坐实了我可能真的不行。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哦原来是害怕面对自己不行啊。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对没错，所以他们就会。宁愿就是维持这种，我就是懒虫的这样的一个形象甚至被你骂。他都不愿意去尝试说我努力了会怎么样因为他觉得。假装不在乎要比，我真的拼尽全力但是输了要，更能够保护我自己的自尊。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 为什么有些孩子他反而会用懒来，吸引家长的注意呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 这个其实就是因为家长的反应让孩子发现了。懒惰可以成为他的一个特权。哦，就是，比如说有些孩子他就是不收拾书包。他就等着他妈妈来帮他收拾然后他妈妈就会一边帮他收拾一边骂他。但其实他要的就是你骂他这件事情，就是你对他的关注。哦，对他甚至会用这种。故意不记作业。让你，爸爸来陪着我一起补作业啊等等就是他发现我只要懒。就可以让你们围着我转。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哦吼，原来他的懒还可以是一个操控你们的一个工具啊！</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对没错而且你越焦虑。你越去指责他或者你越去帮他做这些事情。反而让他更坚信了我只要继续这样懒下去就可以继续获得你们的关注而且你们最终还是会帮我把事情解决掉。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 孩子突然间就懒了，就比如说之前他还很愿意画画突然间他就不画了之前他还帮你做家务突然间他就不做了。这个转变是怎么来的？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 这个背后其实很多都是因为有过一些负面的经历。啊，比如说他可能有一次画画。被说，你画的不如谁谁谁。那他可能就会对于画画这件事情失去信心他怕再被比较。或者说他有一次洗碗。把盘子打碎了然后被很严厉的批评了，那他可能就会对于。做家务这件事情也变得很消极，他其实就是怕再犯错。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 有没有什么办法可以让孩子从这种懒，这种逃避的状态当中走出来呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 当然可以啊首先第一个就是。你要改变你对他的评价方式。就是把你要是不懒你就怎么怎么样。换成我看到你，努力的过程。比如说你可以说我看到你，这一次，数学作业最后一道题你算了三遍。你坚持了十分钟，这就是你的进步。啊，就是你要把关注点放在他的努力上而不是只盯着他的结果。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哦，就是肯定他的努力要比，单纯的去批评他的懒惰要更有效果是吗？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对没错然后第二点就是你要帮他把目标拆分成小的，可实现的。步骤，比如说你不要跟他说你今天必须要写完这篇作文。你可以说你先写一个开头，好不好我们就先写一个开头，你写完之后我们就可以去玩一会，再写。对就是用这种小的成功来帮他建立他的自信。第三点就是你要学会放手让他去尝试。让他去，搞砸，对比如说他系鞋带系不好。或者他这个作业写的歪歪扭扭你让他去，因为你如果什么都帮他做了。反而让他觉得他自己没有能力。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 当我们面对孩子这种懒，这种逃避的状态的时候我们应该用什么样的态度什么样的方法去引导他呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 其实啊就是每个懒孩子的背后他其实都有一颗。渴望被看到的心，他并不是说想要跟你对抗。他只是暂时还没有学会怎么去用努力去代替逃避。所以这个时候你如果去责骂他的话反而会让他更退缩。那我们可以尝试的是。蹲下来，看着他的眼睛问他一句是不是有点难？要不要我们一起？</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哇今天我们聊了这么多关于孩子懒背后的一些心理动因。从他的这个自我保护到他的这个用懒来吸引关注。然后到我们应该怎么去引导他其实每一步都让我们，重新去审视。我们应该怎么样更好的去陪伴孩子成长。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对以上就是这期播客的全部内容啦，然后希望我们的分享能够给大家带来一些启发。那咱们下期再见吧拜拜拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-purple-500 hover:underline">coze space</a></p>
+        </div>
+    </div>
